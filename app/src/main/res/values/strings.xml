@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PracticeApp</string>
+    <string name="watched">Просмотрено:</string>
+    <string name="number_of_lessons">Уроки:</string>
+    <string name="progress">Progress</string>
+    <string name="calculate">calculate</string>
 </resources>
