@@ -33,19 +33,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progress" />
 
-    <TextView
+    <EditText
         android:id="@+id/lessonNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/watchNumber"
         app:layout_constraintTop_toTopOf="@+id/lessonText" />
 
-    <TextView
+    <EditText
         android:id="@+id/watchNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/watchText"
