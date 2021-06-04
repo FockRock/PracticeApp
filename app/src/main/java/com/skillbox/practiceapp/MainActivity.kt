@@ -17,12 +17,14 @@ class MainActivity : AppCompatActivity() {
         bindingClass = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
 
-        val lessons = bindingClass.lessonNumber.text.toString().toInt()
-        val watched = bindingClass.watchNumber.text.toString().toInt()
-        val result = ((100/lessons)*watched)
-
         bindingClass.calculate.setOnClickListener {
+
+            val lessons = bindingClass.lessonNumber.text.toString().toInt()
+            val watched = bindingClass.watchNumber.text.toString().toInt()
+            val result = ((100/lessons)*watched)
+
             progressBar()
+
             Handler().postDelayed({
                 bindingClass.progress.text = "$result%"
                 bindingClass.progress.setBackgroundColor(

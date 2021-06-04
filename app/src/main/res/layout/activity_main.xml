@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="100dp"
         android:text="@string/number_of_lessons"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -36,17 +36,21 @@
     <EditText
         android:id="@+id/lessonNumber"
         android:layout_width="40dp"
-        android:layout_height="30dp"
-        android:textSize="25sp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/watchNumber"
-        app:layout_constraintTop_toTopOf="@+id/lessonText" />
+        app:layout_constraintBottom_toBottomOf="@+id/lessonText"
+        app:layout_constraintEnd_toEndOf="@+id/watchNumber" />
 
     <EditText
         android:id="@+id/watchNumber"
         android:layout_width="40dp"
-        android:layout_height="30dp"
-        android:textSize="25sp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:ems="10"
+        android:inputType="number"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/watchText"
         app:layout_constraintEnd_toEndOf="parent"
