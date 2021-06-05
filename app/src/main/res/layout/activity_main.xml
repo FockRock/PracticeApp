@@ -21,72 +21,56 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.265" />
 
-    <TextView
-        android:id="@+id/lessonText"
+    <EditText
+        android:id="@+id/lessonNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="100dp"
-        android:text="@string/number_of_lessons"
+        android:layout_marginTop="68dp"
+        android:hint="Выпущенные уроки"
+        android:gravity="center"
+        android:ems="10"
+        android:inputType="number"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progress" />
 
     <EditText
-        android:id="@+id/lessonNumber"
-        android:layout_width="40dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/lessonText"
-        app:layout_constraintEnd_toEndOf="@+id/watchNumber" />
-
-    <EditText
         android:id="@+id/watchNumber"
-        android:layout_width="40dp"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:ems="10"
-        android:inputType="number"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/watchText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/watchText" />
-
-    <TextView
-        android:id="@+id/watchText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
         android:layout_marginTop="20dp"
-        android:text="@string/watched"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Просмотренные уроки"
+        android:inputType="number"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lessonText" />
+        app:layout_constraintEnd_toEndOf="@+id/lessonNumber"
+        app:layout_constraintStart_toStartOf="@+id/lessonNumber"
+        app:layout_constraintTop_toBottomOf="@+id/lessonNumber" />
 
     <Button
         android:id="@+id/calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="96dp"
         android:text="@string/calculate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/watchText"
-        app:layout_constraintVertical_bias="0.341" />
+        app:layout_constraintTop_toBottomOf="@+id/lessonNumber" />
 
     <ProgressBar
         android:id="@+id/progressBar"
-        android:visibility="gone"
         style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="43dp"
+        android:layout_height="294dp"
         android:layout_marginBottom="50dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/calculate"
         app:layout_constraintStart_toStartOf="@+id/calculate"
