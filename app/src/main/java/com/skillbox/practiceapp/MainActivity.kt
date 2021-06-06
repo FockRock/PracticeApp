@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity() {
 
         bindingClass.calculate.setOnClickListener {
 
-            val lessons = bindingClass.lessonNumber.text.toString().toInt()
-            val watched = bindingClass.watchNumber.text.toString().toInt()
+            val lessons = bindingClass.lessonNumber.text.toString().toDouble()
+            val watched = bindingClass.watchNumber.text.toString().toDouble()
             val result = ((100/lessons)*watched)
 
             progressBar()
@@ -29,10 +29,10 @@ class MainActivity : AppCompatActivity() {
                 bindingClass.progress.text = "$result%"
                 bindingClass.progress.setBackgroundColor(
                     when(result){
-                        in 0..19 -> getColor(R.color.black)
-                        in 20..39 -> getColor(R.color.red)
-                        in 40..79 -> getColor(R.color.yellow)
-                        in 80..100 -> getColor(R.color.green)
+                        in 0.0..19.9 -> getColor(R.color.black)
+                        in 20.0..39.9 -> getColor(R.color.red)
+                        in 40.0..79.9 -> getColor(R.color.yellow)
+                        in 80.0..100.0 -> getColor(R.color.green)
                         else -> getColor(R.color.white)
                     }
                 )
