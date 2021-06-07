@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/progress"
-        android:layout_width="200dp"
+        android:layout_width="180dp"
         android:layout_height="50dp"
         android:text="@string/progress"
         android:textAlignment="center"
@@ -16,19 +16,20 @@
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.265" />
+        app:layout_constraintVertical_bias="0.381" />
 
     <EditText
         android:id="@+id/lessonNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:hint="Выпущенные уроки"
-        android:gravity="center"
+        android:layout_marginTop="32dp"
         android:ems="10"
+        android:gravity="center"
+        android:hint="Выпущенные уроки"
         android:inputType="number"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -62,7 +63,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lessonNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/watchNumber" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -75,5 +76,16 @@
         app:layout_constraintEnd_toEndOf="@+id/calculate"
         app:layout_constraintStart_toStartOf="@+id/calculate"
         app:layout_constraintTop_toBottomOf="@+id/calculate" />
+
+    <ImageView
+        android:id="@+id/smile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/progress"
+        app:layout_constraintEnd_toEndOf="@+id/progress"
+        app:layout_constraintStart_toStartOf="@+id/progress"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
