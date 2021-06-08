@@ -4,4 +4,6 @@
     <string name="number_of_lessons">Уроки:</string>
     <string name="progress">Progress</string>
     <string name="calculate">calculate</string>
+    <string name="all_lessons">Выпущенные уроки</string>
+    <string name="watched_lessons">Просмотренные уроки</string>
 </resources>

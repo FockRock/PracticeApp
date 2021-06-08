@@ -29,31 +29,22 @@ class MainActivity : AppCompatActivity() {
 
                     when(result){
                         in 0..19 -> {
-                            bindingClass.progress.setBackgroundColor(getColor(R.color.black))
+                            magic(R.color.black, R.drawable.dead)
                             bindingClass.progress.setTextColor(getColor(R.color.white))
-                            bindingClass.smile.isVisible = true
-                            bindingClass.smile.setImageResource(R.drawable.dead)
                         }
-                        in 20..39 -> {
-                            bindingClass.progress.setBackgroundColor(getColor(R.color.red))
-                            bindingClass.smile.isVisible = true
-                            bindingClass.smile.setImageResource(R.drawable.angry)
-                        }
-                        in 40..79 -> {
-                            bindingClass.progress.setBackgroundColor(getColor(R.color.yellow))
-                            bindingClass.smile.isVisible = true
-                            bindingClass.smile.setImageResource(R.drawable.normal)
-                        }
-                        in 80..100 -> {
-                            bindingClass.progress.setBackgroundColor(getColor(R.color.green))
-                            bindingClass.smile.isVisible = true
-                            bindingClass.smile.setImageResource(R.drawable.happy)
-                        }
+                        in 20..39 -> magic(R.color.red, R.drawable.angry)
+                        in 40..79 -> magic(R.color.yellow, R.drawable.normal)
+                        in 80..100 -> magic(R.color.green, R.drawable.happy)
                         else -> getColor(R.color.white)
                     }
             },2000)
         }
+    }
 
+    private fun magic(Color: Int, Image: Int) {
+        bindingClass.progress.setBackgroundColor(getColor(Color))
+        bindingClass.smile.isVisible = true
+        bindingClass.smile.setImageResource(Image)
     }
 
     private fun progressBar() {
