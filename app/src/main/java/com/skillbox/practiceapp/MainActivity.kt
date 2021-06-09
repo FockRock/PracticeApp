@@ -1,8 +1,10 @@
 package com.skillbox.practiceapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.view.View
 import android.widget.Toast
 import androidx.core.view.isVisible
 import com.skillbox.practiceapp.databinding.ActivityMainBinding
@@ -38,6 +40,8 @@ class MainActivity : AppCompatActivity() {
                         else -> getColor(R.color.white)
                     }
             },2000)
+
+            bindingClass.go.isEnabled = true
         }
     }
 
@@ -56,5 +60,10 @@ class MainActivity : AppCompatActivity() {
             bindingClass.progressBar.isVisible = false
             Toast.makeText(this, "Calculation complete!", Toast.LENGTH_SHORT).show()
         }, 2000)
+    }
+
+    fun secondActivityStart(view: View) {
+        val intent = Intent(this, SecondActivity::class.java)
+        startActivity(intent)
     }
 }
