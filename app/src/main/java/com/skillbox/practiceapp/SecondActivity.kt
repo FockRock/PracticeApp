@@ -12,6 +12,8 @@ class SecondActivity: AppCompatActivity() {
         bindingClass = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
 
+        bindingClass.status.text = intent.getStringExtra("status")
 
     }
+
 }
