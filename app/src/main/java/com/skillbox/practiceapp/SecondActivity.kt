@@ -1,6 +1,7 @@
 package com.skillbox.practiceapp
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.skillbox.practiceapp.databinding.ActivitySecondBinding
 
@@ -14,6 +15,10 @@ class SecondActivity: AppCompatActivity() {
 
         bindingClass.status.text = intent.getStringExtra("status")
 
+    }
+
+    fun goBack(view: View) {
+        finish()
     }
 
 }
