@@ -7,17 +7,17 @@ import android.os.Handler
 import android.view.View
 import android.widget.Toast
 import androidx.core.view.isVisible
-import com.skillbox.practiceapp.databinding.ActivityMainBinding
+import com.skillbox.practiceapp.databinding.PracticeCalculateBinding
 
-class MainActivity : AppCompatActivity() {
+class PracticeCalculateActivity : AppCompatActivity() {
 
-    lateinit var bindingClass: ActivityMainBinding
+    private lateinit var bindingClass: PracticeCalculateBinding
 
-    lateinit var status: String
+    private lateinit var status: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bindingClass = ActivityMainBinding.inflate(layoutInflater)
+        bindingClass = PracticeCalculateBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
 
         bindingClass.calculate.setOnClickListener {
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun secondActivityStart(view: View) {
-        val intent = Intent(this, SecondActivity::class.java)
+        val intent = Intent(this, CalculationResultActivity::class.java)
         intent.putExtra("status", status)
         startActivity(intent)
     }

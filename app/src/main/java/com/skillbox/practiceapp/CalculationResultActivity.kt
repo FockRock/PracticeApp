@@ -3,14 +3,14 @@ package com.skillbox.practiceapp
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.skillbox.practiceapp.databinding.ActivitySecondBinding
+import com.skillbox.practiceapp.databinding.CalculationResultBinding
 
-class SecondActivity: AppCompatActivity() {
-    lateinit var bindingClass: ActivitySecondBinding
+class CalculationResultActivity: AppCompatActivity() {
+    private lateinit var bindingClass: CalculationResultBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bindingClass = ActivitySecondBinding.inflate(layoutInflater)
+        bindingClass = CalculationResultBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
 
         bindingClass.status.text = intent.getStringExtra("status")
