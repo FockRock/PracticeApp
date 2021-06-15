@@ -7,4 +7,7 @@
     <string name="all_lessons">Выпущенные уроки</string>
     <string name="watched_lessons">Просмотренные уроки</string>
     <string name="back">Back</string>
+    <string name="log_in">Log in</string>
+    <string name="email_enter">Введите email</string>
+    <string name="password_enter">Введите password</string>
 </resources>
