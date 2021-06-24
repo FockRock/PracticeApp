@@ -10,4 +10,6 @@
     <string name="log_in">Log in</string>
     <string name="email_enter">Введите email</string>
     <string name="password_enter">Введите password</string>
+    <string name="email">Email:</string>
+    <string name="password">Password:</string>
 </resources>

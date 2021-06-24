@@ -58,15 +58,8 @@ class PracticeCalculateActivity : AppCompatActivity() {
 
         Handler().postDelayed({
             bindingClass.calculate.isEnabled = true
-            bindingClass.go.isEnabled = true
             bindingClass.progressBar.isVisible = false
-            Toast.makeText(this, "Calculation complete!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, status, Toast.LENGTH_LONG).show()
         }, 2000)
-    }
-
-    fun secondActivityStart(view: View) {
-        val intent = Intent(this, CalculationResultActivity::class.java)
-        intent.putExtra("status", status)
-        startActivity(intent)
     }
 }
