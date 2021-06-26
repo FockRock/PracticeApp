@@ -1,10 +1,8 @@
 package com.skillbox.practiceapp
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.view.View
 import android.widget.Toast
 import androidx.core.view.isVisible
 import com.skillbox.practiceapp.databinding.PracticeCalculateBinding
@@ -12,8 +10,6 @@ import com.skillbox.practiceapp.databinding.PracticeCalculateBinding
 class PracticeCalculateActivity : AppCompatActivity() {
 
     private lateinit var bindingClass: PracticeCalculateBinding
-
-    private lateinit var status: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +45,7 @@ class PracticeCalculateActivity : AppCompatActivity() {
         bindingClass.progress.setBackgroundColor(getColor(Color))
         bindingClass.smile.isVisible = true
         bindingClass.smile.setImageResource(Image)
-        status = statusTemp
+        bindingClass.textStatus.text = statusTemp
     }
 
     private fun progressBar() {
@@ -59,7 +55,7 @@ class PracticeCalculateActivity : AppCompatActivity() {
         Handler().postDelayed({
             bindingClass.calculate.isEnabled = true
             bindingClass.progressBar.isVisible = false
-            Toast.makeText(this, status, Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Calculation Complete!", Toast.LENGTH_SHORT).show()
         }, 2000)
     }
 }
