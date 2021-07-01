@@ -16,6 +16,13 @@ class PracticeCalculateActivity : AppCompatActivity() {
         bindingClass = PracticeCalculateBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
 
+        val emailBlank = intent.getStringExtra("email")?.isBlank()
+
+        if (emailBlank != true) {
+            bindingClass.tEmail.isVisible = true
+            bindingClass.myEmail.text = intent.getStringExtra("email")
+        }
+
         bindingClass.calculate.setOnClickListener {
 
             val lessons = bindingClass.lessonNumber.text.toString().toDouble()
