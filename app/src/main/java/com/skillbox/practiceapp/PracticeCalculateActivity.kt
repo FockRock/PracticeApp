@@ -42,7 +42,7 @@ class PracticeCalculateActivity : AppCompatActivity() {
                         in 20..39 -> magic(R.color.red, R.drawable.angry, "Плохо")
                         in 40..79 -> magic(R.color.yellow, R.drawable.normal, "Нормально")
                         in 80..100 -> magic(R.color.green, R.drawable.happy, "Отлично!")
-                        else -> getColor(R.color.white)
+                        else -> magic(R.color.white, R.drawable.error, "Ошибка")
                     }
             },2000)
         }
