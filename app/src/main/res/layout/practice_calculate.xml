@@ -26,7 +26,7 @@
         android:id="@+id/lessonNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="50dp"
         android:ems="10"
         android:gravity="center"
         android:hint="@string/all_lessons"
@@ -99,24 +99,5 @@
         app:layout_constraintEnd_toEndOf="@+id/smile"
         app:layout_constraintStart_toStartOf="@+id/smile"
         app:layout_constraintTop_toBottomOf="@+id/smile" />
-
-    <TextView
-        android:id="@+id/tEmail"
-        android:visibility="gone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/email"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/lessonNumber"
-        app:layout_constraintStart_toStartOf="@+id/lessonNumber"
-        app:layout_constraintTop_toBottomOf="@+id/progress" />
-
-    <TextView
-        android:id="@+id/myEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tEmail"
-        app:layout_constraintStart_toEndOf="@+id/tEmail" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

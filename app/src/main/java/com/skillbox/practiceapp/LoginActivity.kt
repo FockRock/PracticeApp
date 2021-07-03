@@ -17,9 +17,9 @@ class LoginActivity: AppCompatActivity() {
 
     }
 
-    fun goStudy(view: View) {
-        val intent = Intent(this, PracticeCalculateActivity::class.java)
-        intent.putExtra("email", bindingClass.editTextTextEmailAddress.text.toString())
-        startActivity(intent)
+    fun login(view: View) {
+        val l = Intent(this, PracticeCalculateActivity::class.java)
+        startActivity(l)
     }
+
 }
