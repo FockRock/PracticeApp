@@ -100,4 +100,15 @@
         app:layout_constraintStart_toStartOf="@+id/smile"
         app:layout_constraintTop_toBottomOf="@+id/smile" />
 
+    <Button
+        android:id="@+id/bBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="back"
+        android:text="@string/back"
+        app:layout_constraintEnd_toEndOf="@+id/calculate"
+        app:layout_constraintStart_toStartOf="@+id/calculate"
+        app:layout_constraintTop_toBottomOf="@+id/calculate" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,7 @@ package com.skillbox.practiceapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.view.View
 import android.widget.Toast
 import androidx.core.view.isVisible
 import com.skillbox.practiceapp.databinding.PracticeCalculateBinding
@@ -57,5 +58,9 @@ class PracticeCalculateActivity : AppCompatActivity() {
             bindingClass.progressBar.isVisible = false
             Toast.makeText(this, "Calculation Complete!", Toast.LENGTH_SHORT).show()
         }, 2000)
+    }
+
+    fun back(view: View) {
+        finish()
     }
 }
