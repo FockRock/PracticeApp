@@ -10,8 +10,10 @@
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
     <string name="log_in">Log in</string>
-    <string name="email_enter">Введите email</string>
-    <string name="password_enter">Введите password</string>
+    <string name="email_enter">Email</string>
+    <string name="password_enter">Password</string>
     <string name="email">Email:</string>
     <string name="password">Password:</string>
+    <string name="name_enter">Name</string>
+    <string name="done">Done</string>
 </resources>

@@ -10,6 +10,10 @@ class LoginActivity: AppCompatActivity() {
 
     private lateinit var bindingClass: LoginActivityBinding
 
+    private var name = ""
+    private var email = ""
+    private var password = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bindingClass = LoginActivityBinding.inflate(layoutInflater)
@@ -17,9 +21,18 @@ class LoginActivity: AppCompatActivity() {
 
     }
 
-    fun login(view: View) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+    }
+
+    fun signIn(view: View) {
         val l = Intent(this, PracticeCalculateActivity::class.java)
         startActivity(l)
+    }
+
+    fun signUp(view: View) {
+        val s = Intent(this, SignInUpActivity::class.java)
+        startActivityForResult(s, 235)
     }
 
 }

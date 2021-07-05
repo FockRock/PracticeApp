@@ -20,6 +20,10 @@
         <activity android:name=".PracticeCalculateActivity">
 
         </activity>
+
+        <activity android:name=".SignInUpActivity">
+
+        </activity>
     </application>
 
 </manifest>
