@@ -10,11 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticeApp">
         <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity android:name=".PracticeCalculateActivity">
@@ -23,6 +19,14 @@
 
         <activity android:name=".SignInUpActivity">
 
+        </activity>
+
+        <activity android:name=".Test">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
