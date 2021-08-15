@@ -16,4 +16,5 @@
     <string name="password">Password:</string>
     <string name="name_enter">Name</string>
     <string name="done">Done</string>
+    <string name="question">What do you want?</string>
 </resources>

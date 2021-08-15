@@ -1,7 +1,8 @@
 package com.skillbox.practiceapp
 
+import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.skillbox.practiceapp.databinding.TestBinding
 
@@ -13,5 +14,10 @@ class Test: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bindingClass = TestBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
+    }
+
+    fun calculateProgress (view: View) {
+        val i = Intent(this, PracticeCalculateActivity::class.java)
+        startActivityForResult(i, Constance.REQUEST_CODE_CALCULATE)
     }
 }
