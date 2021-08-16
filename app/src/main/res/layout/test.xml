@@ -30,4 +30,15 @@
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.272" />
+
+    <Button
+        android:id="@+id/bSConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="convertSalary"
+        android:text="@string/convert"
+        app:layout_constraintEnd_toEndOf="@+id/cb"
+        app:layout_constraintStart_toStartOf="@+id/cb"
+        app:layout_constraintTop_toBottomOf="@+id/cb" />
 </androidx.constraintlayout.widget.ConstraintLayout>

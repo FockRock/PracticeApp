@@ -17,4 +17,7 @@
     <string name="name_enter">Name</string>
     <string name="done">Done</string>
     <string name="question">What do you want?</string>
+    <string name="salary">Your salary:</string>
+    <string name="salary_enter">Enter your salary</string>
+    <string name="convert">Convert</string>
 </resources>

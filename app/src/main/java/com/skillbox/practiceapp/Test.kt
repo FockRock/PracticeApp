@@ -20,4 +20,9 @@ class Test: AppCompatActivity() {
         val i = Intent(this, PracticeCalculateActivity::class.java)
         startActivityForResult(i, Constance.REQUEST_CODE_CALCULATE)
     }
+
+    fun convertSalary (view: View) {
+        val i = Intent (this, SalaryConverter::class.java)
+        startActivityForResult(i, Constance.REQUEST_CODE_CONVERT)
+    }
 }

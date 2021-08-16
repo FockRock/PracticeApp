@@ -9,4 +9,5 @@ object Constance {
     const val REQUEST_CODE_SIGN_IN = 1234
     const val REQUEST_CODE_SIGN_UP = 4321
     const val REQUEST_CODE_CALCULATE = 111222
+    const val REQUEST_CODE_CONVERT = 22445
 }

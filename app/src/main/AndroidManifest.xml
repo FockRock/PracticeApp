@@ -10,15 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticeApp">
         <activity android:name=".LoginActivity">
-
         </activity>
 
         <activity android:name=".PracticeCalculateActivity">
-
         </activity>
 
         <activity android:name=".SignInUpActivity">
+        </activity>
 
+        <activity android:name=".SalaryConverter">
         </activity>
 
         <activity android:name=".Test">
