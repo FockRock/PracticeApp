@@ -3,7 +3,6 @@ package com.skillbox.practiceapp
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
 import com.skillbox.practiceapp.databinding.SalaryConverterBinding
 
 class SalaryConverter: AppCompatActivity() {

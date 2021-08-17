@@ -20,4 +20,6 @@
     <string name="salary">Your salary:</string>
     <string name="salary_enter">Enter your salary</string>
     <string name="convert">Convert</string>
+    <string name="crypto">Enter price of the coin</string>
+    <string name="profit">Profit</string>
 </resources>

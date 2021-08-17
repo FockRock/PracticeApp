@@ -25,4 +25,9 @@ class Test: AppCompatActivity() {
         val i = Intent (this, SalaryConverter::class.java)
         startActivityForResult(i, Constance.REQUEST_CODE_CONVERT)
     }
+
+    fun profitCalculate (view: View) {
+        val i = Intent (this, Profit::class.java)
+        startActivityForResult(i, Constance.REQUEST_CODE_PROFIT)
+    }
 }

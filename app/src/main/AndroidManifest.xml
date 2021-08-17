@@ -9,6 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticeApp">
+
+        <activity android:name=".Test">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".LoginActivity">
         </activity>
 
@@ -21,13 +30,9 @@
         <activity android:name=".SalaryConverter">
         </activity>
 
-        <activity android:name=".Test">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".Profit">
         </activity>
+
     </application>
 
 </manifest>
