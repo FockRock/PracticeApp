@@ -16,12 +16,16 @@ class Profit: AppCompatActivity() {
 
         bindingClass.button2.setOnClickListener {
             bindingClass.tvResult.visibility = View.VISIBLE
-            calculate(bindingClass.editTextNumber.text.toString().toInt())
+            calculate(bindingClass.editTextNumber.text.toString().toDouble())
         }
     }
 
-    private fun calculate(a: Int) {
+    private fun calculate(a: Double) {
         val b = (a/100.0)*99.0
         bindingClass.tvResult.text = b.toString()
+    }
+
+    fun back(view: View) {
+        finish()
     }
 }

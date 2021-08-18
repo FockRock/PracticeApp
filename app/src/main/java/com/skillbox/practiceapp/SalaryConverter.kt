@@ -24,4 +24,8 @@ class SalaryConverter: AppCompatActivity() {
         val res = (a/73.5).toInt().toString() + " $"
         bindingClass.tvResult.text = res
     }
+
+    fun back(view: View) {
+        finish()
+    }
 }
