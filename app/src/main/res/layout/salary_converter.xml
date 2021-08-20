@@ -7,7 +7,7 @@
     android:onClick="back">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvSalary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="272dp"
@@ -27,7 +27,7 @@
         android:ems="10"
         android:gravity="center"
         android:hint="@string/salary_enter"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="@+id/textView2"
@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/bConvert" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageSalary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
