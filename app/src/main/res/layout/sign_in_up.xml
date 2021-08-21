@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:onClick="done">
 
     <EditText
         android:id="@+id/edName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="@string/name_enter"
         android:inputType="textPersonName"
@@ -26,7 +27,6 @@
         android:ems="10"
         android:hint="@string/email_enter"
         android:inputType="textPersonName"
-        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@+id/edName"
         app:layout_constraintStart_toStartOf="@+id/edName"
         app:layout_constraintTop_toBottomOf="@+id/edName" />
@@ -47,7 +47,8 @@
         android:id="@+id/done"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
+        android:onClick="done"
         android:text="@string/done"
         app:layout_constraintEnd_toEndOf="@+id/edPassword"
         app:layout_constraintStart_toStartOf="@+id/edPassword"
@@ -63,14 +64,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/study" />
 
-    <Button
-        android:id="@+id/bLogin"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:onClick="logIn"
-        android:text="@string/log_in"
-        app:layout_constraintEnd_toEndOf="@+id/done"
-        app:layout_constraintStart_toStartOf="@+id/done"
-        app:layout_constraintTop_toBottomOf="@+id/done" />
 </androidx.constraintlayout.widget.ConstraintLayout>

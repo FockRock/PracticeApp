@@ -11,4 +11,8 @@ object Constance {
     const val REQUEST_CODE_CALCULATE = 111222
     const val REQUEST_CODE_CONVERT = 22445
     const val REQUEST_CODE_PROFIT = 253563
+
+    const val NAME = "name"
+    const val PASSWORD = "password"
+    const val EMAIL = "email"
 }

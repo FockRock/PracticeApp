@@ -22,4 +22,5 @@
     <string name="convert">Convert</string>
     <string name="crypto">Enter price of the coin</string>
     <string name="profit">Profit</string>
+    <string name="lesson_learned">% Learned</string>
 </resources>
