@@ -21,7 +21,7 @@ class Profit: AppCompatActivity() {
     }
 
     private fun calculate(a: Double) {
-        val b = (a/100.0)*99.0
+        val b = (a/100.0) * (100.0 - bindingClass.editPercent.text.toString().toDouble())
         bindingClass.tvResult.text = b.toString()
     }
 
