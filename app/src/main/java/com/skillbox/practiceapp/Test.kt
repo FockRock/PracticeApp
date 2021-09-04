@@ -3,12 +3,16 @@ package com.skillbox.practiceapp
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.skillbox.practiceapp.databinding.TestBinding
 
 class Test : AppCompatActivity() {
 
     lateinit var bindingClass: TestBinding
+    lateinit var launcher: ActivityResultLauncher<Intent>
 
     var name = ""
     var email = ""
@@ -18,38 +22,37 @@ class Test : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bindingClass = TestBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
-    }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
+        launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            result: ActivityResult ->
+            if (result.resultCode == RESULT_OK) {
 
-        if (requestCode == Constance.REQUEST_CODE_SIGN_UP) {
+                name = result.data?.getStringExtra(Constance.NAME)!!
+                email = result.data?.getStringExtra(Constance.EMAIL)!!
+                password = result.data?.getStringExtra(Constance.PASSWORD)!!
 
-            name = data?.getStringExtra(Constance.NAME)!!
-            email = data.getStringExtra(Constance.EMAIL)!!
-            password = data.getStringExtra(Constance.PASSWORD)!!
+                bindingClass.textView.text = "Please, Sign In"
+                bindingClass.bSignUp.visibility = View.GONE
+                bindingClass.bSignIn.visibility = View.VISIBLE
 
-            bindingClass.textView.text = "Please, Sign In"
-            bindingClass.bSignUp.visibility = View.GONE
-            bindingClass.bSignIn.visibility = View.VISIBLE
+            } else if (result.resultCode == RESULT_CANCELED) {
 
-        } else if (requestCode == Constance.REQUEST_CODE_SIGN_IN) {
+                val e = result.data?.getStringExtra(Constance.EMAIL)
+                val p = result.data?.getStringExtra(Constance.PASSWORD)
 
-            val e = data?.getStringExtra(Constance.EMAIL)
-            val p = data?.getStringExtra(Constance.PASSWORD)
+                if (email == e && password == p) {
 
-            if (email == e && password == p) {
+                    bindingClass.textView.text = "Добро пожаловать, $name"
+                    bindingClass.bSignIn.visibility = View.GONE
+                    bindingClass.bProfit.visibility = View.VISIBLE
+                    bindingClass.bSConvert.visibility = View.VISIBLE
+                    bindingClass.cb.visibility = View.VISIBLE
 
-                bindingClass.textView.text = "Добро пожаловать, $name"
-                bindingClass.bSignIn.visibility = View.GONE
-                bindingClass.bProfit.visibility = View.VISIBLE
-                bindingClass.bSConvert.visibility = View.VISIBLE
-                bindingClass.cb.visibility = View.VISIBLE
+                } else {
 
-            } else {
+                    bindingClass.textView.text = "Неверная почта или пароль!"
 
-                bindingClass.textView.text = "Неверная почта или пароль!"
-
+                }
             }
         }
     }
@@ -72,12 +75,12 @@ class Test : AppCompatActivity() {
     fun signIn(view: View) {
         val i = Intent(this, SignInUpActivity::class.java)
         i.putExtra(Constance.SIGN_STATE, Constance.SIGN_IN_STATE)
-        startActivityForResult(i, Constance.REQUEST_CODE_SIGN_IN)
+        launcher.launch(i)
     }
 
     fun signUp(view: View) {
         val i = Intent(this, SignInUpActivity::class.java)
         i.putExtra(Constance.SIGN_STATE, Constance.SIGN_UP_STATE)
-        startActivityForResult(i, Constance.REQUEST_CODE_SIGN_UP)
+        launcher.launch(i)
     }
 }

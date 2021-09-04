@@ -28,20 +28,16 @@ class SignInUpActivity : AppCompatActivity() {
     fun done(view: View) {
 
         if (intentResult == Constance.SIGN_UP_STATE) {
-
             intent.putExtra(Constance.NAME, bindingClass.edName.text.toString())
             intent.putExtra(Constance.EMAIL, bindingClass.edEmail.text.toString())
             intent.putExtra(Constance.PASSWORD, bindingClass.edPassword.text.toString())
             setResult(RESULT_OK, intent)
             finish()
-
         } else {
-
             intent.putExtra(Constance.EMAIL, bindingClass.edEmail.text.toString())
             intent.putExtra(Constance.PASSWORD, bindingClass.edPassword.text.toString())
-            setResult(RESULT_OK, intent)
+            setResult(RESULT_CANCELED, intent)
             finish()
-
         }
     }
 }
