@@ -9,4 +9,7 @@ object Constance {
     const val NAME = "name"
     const val PASSWORD = "password"
     const val EMAIL = "email"
+
+    const val SIGN_IN = 3322
+    const val SIGN_UP = 4455
 }

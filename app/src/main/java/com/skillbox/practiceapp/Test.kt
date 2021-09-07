@@ -25,7 +25,7 @@ class Test : AppCompatActivity() {
 
         launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             result: ActivityResult ->
-            if (result.resultCode == RESULT_OK) {
+            if (result.resultCode == Constance.SIGN_UP) {
 
                 name = result.data?.getStringExtra(Constance.NAME)!!
                 email = result.data?.getStringExtra(Constance.EMAIL)!!
@@ -35,7 +35,7 @@ class Test : AppCompatActivity() {
                 bindingClass.bSignUp.visibility = View.GONE
                 bindingClass.bSignIn.visibility = View.VISIBLE
 
-            } else if (result.resultCode == RESULT_CANCELED) {
+            } else if (result.resultCode == Constance.SIGN_IN) {
 
                 val e = result.data?.getStringExtra(Constance.EMAIL)
                 val p = result.data?.getStringExtra(Constance.PASSWORD)

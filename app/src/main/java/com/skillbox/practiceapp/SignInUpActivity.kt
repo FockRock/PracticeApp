@@ -31,12 +31,12 @@ class SignInUpActivity : AppCompatActivity() {
             intent.putExtra(Constance.NAME, bindingClass.edName.text.toString())
             intent.putExtra(Constance.EMAIL, bindingClass.edEmail.text.toString())
             intent.putExtra(Constance.PASSWORD, bindingClass.edPassword.text.toString())
-            setResult(RESULT_OK, intent)
+            setResult(Constance.SIGN_UP, intent)
             finish()
         } else {
             intent.putExtra(Constance.EMAIL, bindingClass.edEmail.text.toString())
             intent.putExtra(Constance.PASSWORD, bindingClass.edPassword.text.toString())
-            setResult(RESULT_CANCELED, intent)
+            setResult(Constance.SIGN_IN, intent)
             finish()
         }
     }
