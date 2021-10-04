@@ -12,7 +12,9 @@ import com.skillbox.practiceapp.databinding.TestBinding
 class Test : AppCompatActivity() {
 
     lateinit var bindingClass: TestBinding
-    lateinit var launcher: ActivityResultLauncher<Intent>
+    private var launcher: ActivityResultLauncher<Intent>? = null
+    private var salary: ActivityResultLauncher<Intent>? = null
+    private var practiceProgress: ActivityResultLauncher<Intent>? = null
 
     var name = ""
     var email = ""
@@ -22,6 +24,22 @@ class Test : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bindingClass = TestBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
+
+        salary = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            result: ActivityResult ->
+            if (result.resultCode == RESULT_OK) {
+                val text = result.data?.getStringExtra(Constance.KEY1)
+                bindingClass.salaryTv.text = "Salary: $text"
+            }
+        }
+
+        practiceProgress = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            result: ActivityResult ->
+            if (result.resultCode == RESULT_OK) {
+                val text = result.data?.getStringExtra("key")
+                bindingClass.progressTv.text = "Progress: $text"
+            }
+        }
 
         launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             result: ActivityResult ->
@@ -58,13 +76,11 @@ class Test : AppCompatActivity() {
     }
 
     fun calculateProgress(view: View) {
-        val i = Intent(this, PracticeCalculateActivity::class.java)
-        startActivity(i)
+        practiceProgress?.launch(Intent(this, PracticeCalculateActivity::class.java))
     }
 
     fun convertSalary(view: View) {
-        val i = Intent(this, SalaryConverter::class.java)
-        startActivity(i)
+        salary?.launch(Intent(this, SalaryConverter::class.java))
     }
 
     fun profitCalculate(view: View) {
@@ -75,12 +91,12 @@ class Test : AppCompatActivity() {
     fun signIn(view: View) {
         val i = Intent(this, SignInUpActivity::class.java)
         i.putExtra(Constance.SIGN_STATE, Constance.SIGN_IN_STATE)
-        launcher.launch(i)
+        launcher?.launch(i)
     }
 
     fun signUp(view: View) {
         val i = Intent(this, SignInUpActivity::class.java)
         i.putExtra(Constance.SIGN_STATE, Constance.SIGN_UP_STATE)
-        launcher.launch(i)
+        launcher?.launch(i)
     }
 }

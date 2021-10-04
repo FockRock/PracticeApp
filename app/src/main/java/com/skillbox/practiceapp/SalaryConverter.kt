@@ -1,7 +1,9 @@
 package com.skillbox.practiceapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.activity.result.ActivityResultLauncher
 import androidx.appcompat.app.AppCompatActivity
 import com.skillbox.practiceapp.databinding.SalaryConverterBinding
 
@@ -21,11 +23,14 @@ class SalaryConverter: AppCompatActivity() {
     }
 
     private fun convert(a: Int) {
-        val res = (a/73.5).toInt().toString() + " $"
+        val res = (a/72.5).toInt().toString() + " $"
         bindingClass.tvResult.text = res
     }
 
     fun back(view: View) {
+        val i = Intent()
+        i.putExtra(Constance.KEY1, bindingClass.tvResult.text.toString())
+        setResult(RESULT_OK, i)
         finish()
     }
 }

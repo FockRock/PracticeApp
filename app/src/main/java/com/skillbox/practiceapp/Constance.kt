@@ -13,5 +13,6 @@ object Constance {
 
     const val SIGN_IN = 3322
     const val SIGN_UP = 4455
+    const val SALARY = 2839
     const val KEY2 = 434523
 }

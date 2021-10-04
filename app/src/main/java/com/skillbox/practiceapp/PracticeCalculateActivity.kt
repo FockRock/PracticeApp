@@ -1,5 +1,6 @@
 package com.skillbox.practiceapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -61,6 +62,9 @@ class PracticeCalculateActivity : AppCompatActivity() {
     }
 
     fun back(view: View) {
+        val i = Intent()
+        i.putExtra("key", bindingClass.progress.text.toString())
+        setResult(RESULT_OK, i)
         finish()
     }
 }
