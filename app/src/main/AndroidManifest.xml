@@ -11,6 +11,9 @@
         android:theme="@style/Theme.PracticeApp">
 
         <activity android:name=".Test">
+        </activity>
+
+        <activity android:name=".MoviesListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
