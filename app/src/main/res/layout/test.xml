@@ -97,4 +97,17 @@
         app:layout_constraintEnd_toEndOf="@+id/salaryTv"
         app:layout_constraintStart_toStartOf="@+id/salaryTv"
         app:layout_constraintTop_toBottomOf="@+id/salaryTv" />
+
+    <Button
+        android:id="@+id/bQRgenerator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goGenerate"
+        android:text="Generate QR"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/progressTv"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/progressTv"
+        app:layout_constraintTop_toBottomOf="@+id/progressTv" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

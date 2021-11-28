@@ -9,6 +9,7 @@
         <entry key="..\:/Programming/Android/PracticeApp/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.3611111111111111" />
         <entry key="..\:/Programming/Android/PracticeApp/app/src/main/res/layout/fragment_1.xml" value="0.375" />
         <entry key="..\:/Programming/Android/PracticeApp/app/src/main/res/layout/fragment_blank.xml" value="0.375" />
+        <entry key="..\:/Programming/Android/PracticeApp/app/src/main/res/layout/fragment_blank2.xml" value="0.375" />
         <entry key="..\:/Programming/Android/PracticeApp/app/src/main/res/layout/fragments.xml" value="0.375" />
         <entry key="..\:/Programming/Android/PracticeApp/app/src/main/res/layout/helllllooooo.xml" value="0.375" />
         <entry key="..\:/Programming/Android/PracticeApp/app/src/main/res/layout/hello.xml" value="0.375" />
@@ -16,6 +17,8 @@
         <entry key="..\:/Programming/Android/PracticeApp/app/src/main/res/layout/movie_list.xml" value="0.375" />
         <entry key="..\:/Programming/Android/PracticeApp/app/src/main/res/layout/poster_item.xml" value="0.33" />
         <entry key="..\:/Programming/Android/PracticeApp/app/src/main/res/layout/profit.xml" value="0.375" />
+        <entry key="..\:/Programming/Android/PracticeApp/app/src/main/res/layout/qr_generator.xml" value="0.375" />
+        <entry key="..\:/Programming/Android/PracticeApp/app/src/main/res/layout/qr_scanner.xml" value="0.375" />
         <entry key="..\:/Programming/Android/PracticeApp/app/src/main/res/layout/salary_converter.xml" value="0.3546875" />
         <entry key="..\:/Programming/Android/PracticeApp/app/src/main/res/layout/sign_in_up.xml" value="0.375" />
         <entry key="..\:/Programming/Android/PracticeApp/app/src/main/res/layout/test.xml" value="0.3546875" />

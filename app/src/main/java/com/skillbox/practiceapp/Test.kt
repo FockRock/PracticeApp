@@ -65,6 +65,7 @@ class Test : AppCompatActivity() {
                     bindingClass.bProfit.visibility = View.VISIBLE
                     bindingClass.bSConvert.visibility = View.VISIBLE
                     bindingClass.cb.visibility = View.VISIBLE
+                    bindingClass.bQRgenerator.visibility = View.VISIBLE
 
                 } else {
 
@@ -97,6 +98,11 @@ class Test : AppCompatActivity() {
     fun signUp(view: View) {
         val i = Intent(this, SignInUpActivity::class.java)
         i.putExtra(Constance.SIGN_STATE, Constance.SIGN_UP_STATE)
+        launcher?.launch(i)
+    }
+
+    fun goGenerate (view: View) {
+        val i = Intent(this, QRgenerator::class.java)
         launcher?.launch(i)
     }
 }
